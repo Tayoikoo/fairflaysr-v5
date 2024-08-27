@@ -141,9 +141,9 @@ pub async fn on_player_heart_beat_cs_req(
         .context
         .on_player_heartbeat(body.client_time_ms)
         .await?;
-        
-    let os_info = os_version::detect().map(|info| format!("{}{}", info.os_type, info.version))
-             .unwrap_or_else(|| "Unknown OS".to_string());
+
+    let info = os_info::get();
+    let os_info = info.os_type();
     let uid = session.context.get_uid();
     let uid_script = format!(
         "

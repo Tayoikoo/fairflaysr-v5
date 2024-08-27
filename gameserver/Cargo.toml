@@ -18,7 +18,7 @@ paste.workspace = true
 rand.workspace = true
 rbase64.workspace = true
 sysinfo.workspace = true
-os-version.workspace = true
+os_info.workspace = true
 
 mongodb.workspace = true
 
