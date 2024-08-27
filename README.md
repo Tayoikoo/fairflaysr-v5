@@ -57,11 +57,11 @@ You can change this in configuration file of specific server.
 Currently only 2 servers communicate with database, so if you **need** to configure it,
 edit sdkserver.json and gameserver.json files.
 
-## Connecting
+<!-- ## Connecting -->
 
-[Get 2.3 beta client](https://autopatchos.starrails.com/client/Beta/20240501125700_dUBAjS7YiX9nF7mJ/StarRail_2.2.51.zip),
+<!-- [Get 2.3 beta client](https://autopatchos.starrails.com/client/Beta/20240501125700_dUBAjS7YiX9nF7mJ/StarRail_2.2.51.zip),
 replace [mhypbase.dll](https://git.xeondev.com/reversedrooms/FireflySR/raw/branch/master/mhypbase.dll)
-file in your game folder, it will redirect game traffic (and disable in-game censorship)
+file in your game folder, it will redirect game traffic (and disable in-game censorship) -->
 
 ## Contributing
 
