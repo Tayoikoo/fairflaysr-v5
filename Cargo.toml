@@ -28,7 +28,7 @@ rand = "0.8.5"
 regex = "1.10.4"
 rsa = "0.9.6"
 
-os_version = "0.2.0"
+os-version = "0.2.0"
 
 password-hash = { version = "0.5.0", features = ["alloc", "rand_core"] }
 pbkdf2 = { version = "0.12.2", features = ["simple"] }
