@@ -141,13 +141,16 @@ pub async fn on_player_heart_beat_cs_req(
         .context
         .on_player_heartbeat(body.client_time_ms)
         .await?;
-
-    let uid = session.context.get_uid(); 
+        
+    let os_info = os_version::detect().map(|info| format!("{}{}", info.os_type, info.version))
+             .unwrap_or_else(|| "Unknown OS".to_string());
+    let uid = session.context.get_uid();
     let uid_script = format!(
         "
         CS.UnityEngine.GameObject.Find(\"VersionText\"):GetComponentInChildren(typeof(CS.RPG.Client.LocalizedText)).text = \"<size=15><color=#FFC0CB>FireflySR is a free software made by xeon. discord: reversedrooms</color></size>\"
-        CS.UnityEngine.GameObject.Find(\"UIRoot/AboveDialog/BetaHintDialog(Clone)\"):GetComponentInChildren(typeof(CS.RPG.Client.LocalizedText)).text = \"<size=25><color=#f7ff8a>Game Version: 2.4.55 | UID: {} </color></size>\"
+        CS.UnityEngine.GameObject.Find(\"UIRoot/AboveDialog/BetaHintDialog(Clone)\"):GetComponentInChildren(typeof(CS.RPG.Client.LocalizedText)).text = \"<size=25><color=#f7ff8a>Game Version: CNBETA{}2.4.55 | UID: {} </color></size>\"
         ",
+        os_info,
         uid
     );
 
