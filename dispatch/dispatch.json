@@ -1,0 +1,28 @@
+{
+	"http_port": 21041,
+	"game_servers": {
+		"feixiao_sr": {
+			"name": "FeixiaoSEGS-SR",
+			"title": "FeixiaoSEGS-SR",
+			"dispatch_url": "http://127.0.0.1:21000/query_gateway/feixiao_sr",
+			"env_type": "2",
+			"gateserver_ip": "127.0.0.1",
+			"gateserver_port": 23301,
+			"gateserver_protocol": "Tcp"
+		}
+	},
+	"versions": {
+		"CNBETAWin2.4.51": {
+			"asset_bundle_url": "https://autopatchcn-ipv6.bhsr.com/asb/BetaLive/output_7663997_cd086af3f307",
+			"ex_resource_url": "https://autopatchcn-ipv6.bhsr.com/design_data/BetaLive/output_7680597_a60760caba0f",
+			"lua_url": "https://autopatchcn-ipv6.bhsr.com/lua/BetaLive/output_7668875_0231727458ad",
+			"lua_version": "7668875"
+		},
+		"OSBETAWin2.2.51": {
+			"asset_bundle_url": "https://autopatchos.starrails.com/asb/BetaLive/output_7037158_b67f5a6a68fb",
+			"ex_resource_url": "https://autopatchos.starrails.com/design_data/BetaLive/output_7033392_aaca9c1b456b",
+			"lua_url": "https://autopatchos.starrails.com/lua/BetaLive/output_7050564_f05a0f949b10",
+			"lua_version": "7050564"
+		}
+	}
+}

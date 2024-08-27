@@ -1,0 +1,9 @@
+target/
+Cargo.lock
+proto/StarRail.proto
+proto/nameTranslation.txt
+assets/
+protos_old.py
+proto/out/old_proto.rs
+proto/src/old_cmd_types.rs
+/*.json

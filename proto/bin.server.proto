@@ -1,0 +1,170 @@
+syntax = "proto3";
+package bin;
+
+message PlayerBasicCompBin {
+	uint32 level = 1;
+	uint32 exp = 2;
+	string nickname = 3;
+	uint32 login_times = 4;
+	int64 created_timestamp = 5;
+	int64 last_login_timestamp = 6;
+}
+
+message PlayerAvatarCompBin {
+	repeated AvatarBin avatar_list = 1;
+}
+
+message AvatarSkillTreeBin {
+	uint32 point_id = 1;
+	uint32 level = 2;
+}
+
+message AvatarBin {
+	int32 avatar_type = 1;
+	uint32 avatar_id = 2;
+	uint32 level = 3;
+	uint32 exp = 4;
+	uint32 promotion = 5;
+	uint32 rank = 6;
+	repeated AvatarSkillTreeBin skill_tree_list = 7;
+	uint32 equipment_unique_id = 8;
+	map<uint32, uint32> relic_map = 9;
+}
+
+message PlayerLineupCompBin {
+	repeated LineupBin lineup_list = 1;
+	uint32 cur_lineup_index = 2;
+	uint32 mp = 3;
+	uint32 mp_max = 4;
+}
+
+message LineupBin {
+	repeated LineupAvatarBin avatar_list = 1;
+	uint32 index = 2;
+	uint32 leader_slot = 3;
+	string name = 4;
+	bool is_virtual = 5;
+	uint32 plane_id = 6;
+	int32 extra_lineup_type = 7;
+}
+
+message LineupAvatarBin {
+	uint32 avatar_id = 1;
+	int32 avatar_type = 2;
+	uint32 slot = 3;
+	uint32 hp = 4;
+	uint32 sp = 5;
+}
+
+message HeroPathTypeBin {
+	int32 basic_type = 1;
+	uint32 rank = 2;
+}
+
+message PlayerHeroPathCompBin {
+	int32 cur_mc_path = 1;
+	int32 cur_march_path = 2;
+	repeated HeroPathTypeBin multipath_type_list = 3;
+}
+
+message HeroBasicTypeBin {
+	int32 basic_type = 1;
+	uint32 rank = 2;
+}
+
+message PlayerHeroCompBin {
+	int32 gender = 1;
+	int32 cur_basic_type = 2;
+	repeated HeroBasicTypeBin basic_type_list = 3;
+}
+
+message EquipmentBin {
+	uint32 unique_id = 1;
+	uint32 tid = 2;
+	uint32 level = 3;
+	uint32 exp = 4;
+	uint32 promotion = 5;
+	uint32 rank = 6;
+	uint32 avatar_id = 7;
+	bool is_protected = 8;
+}
+
+message MaterialBin {
+	uint32 tid = 1;
+	uint32 num = 2;
+}
+
+message RelicAffixBin {
+	uint32 affix_id = 1;
+	uint32 cnt = 2;
+	uint32 step = 3;
+}
+
+message RelicBin {
+	uint32 unique_id = 1;
+	uint32 tid = 2;
+	uint32 level = 3;
+	uint32 exp = 4;
+	uint32 avatar_id = 5;
+	uint32 main_affix_id = 6;
+	repeated RelicAffixBin sub_affix_list = 7;
+	bool is_protected = 8;
+}
+
+message PlayerItemCompBin {
+	uint32 uid_counter = 1;
+	repeated EquipmentBin equipment_list = 2;
+	repeated MaterialBin material_list = 3;
+	repeated RelicBin relic_list = 4;
+}
+
+message TutorialBin {
+	uint32 id = 1;
+	int32 status = 2;
+}
+
+message TutorialGuideBin {
+	uint32 group_id = 1;
+	int32 status = 2;
+}
+
+message PlayerTutorialCompBin {
+	repeated TutorialBin tutorial_list = 1;
+	repeated TutorialGuideBin tutorial_guide_list = 2;
+}
+
+message VectorBin {
+	sint32 x = 1;
+	sint32 y = 2;
+	sint32 z = 3;
+}
+
+message MotionBin {
+	VectorBin pos = 1;
+	VectorBin rot = 2;
+}
+
+message SceneBin {
+	uint32 plane_id = 1;
+	uint32 floor_id = 2;
+	repeated uint32 lighten_section_list = 3;
+	repeated uint32 unlocked_teleport_list = 4;
+	int64 last_enter_time = 5;
+}
+
+message PlayerSceneCompBin {
+	uint32 cur_entry_id = 1;
+	MotionBin cur_position = 2;
+	repeated SceneBin scene_list = 3;
+}
+
+message PlayerDataBin {
+	PlayerBasicCompBin basic_bin = 1;
+	PlayerAvatarCompBin avatar_bin = 2;
+	PlayerLineupCompBin lineup_bin = 3;
+	PlayerHeroCompBin hero_bin = 4;
+	PlayerItemCompBin item_bin = 5;
+	PlayerTutorialCompBin tutorial_bin = 6;
+	PlayerSceneCompBin scene_bin = 7;
+	PlayerHeroPathCompBin multipath_bin = 8;
+}

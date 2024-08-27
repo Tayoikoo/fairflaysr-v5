@@ -1,0 +1,11 @@
+{
+	"tcp_port": 23301,
+	"database": {
+		"connection_string": "mongodb://127.0.0.1:27017",
+		"name": "FireflySR",
+		"autoincrement_collection": "t_uid_autoincrement",
+		"sdk_account_collection": "t_sdk_accounts",
+		"combo_token_collection": "t_combo_tokens",
+		"player_collection": "t_player_data"
+	}
+}

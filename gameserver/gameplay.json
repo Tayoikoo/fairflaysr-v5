@@ -1,0 +1,14 @@
+{
+	"lineup": [1310],
+    "multipath_config": {
+        "avatar_type": [
+            {"avatar_id": 8001, "path": "BoyShamanType"},
+            {"avatar_id": 1001, "path": "Mar7thRogueType"}
+        ]
+    },
+	"monster_wave_list": 
+	[
+		[3013010, 3013010],
+		[3024020]
+	]
+}
