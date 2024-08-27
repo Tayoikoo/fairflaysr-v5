@@ -11,7 +11,11 @@ pub fn setup_routes(router: Router<SdkContext>) -> Router<SdkContext> {
 #[tracing::instrument]
 async fn risky_check() -> Json<serde_json::Value> {
     Json(json!({
-        "data": {},
+        "data": {
+            "id": "none",
+            "action": "ACTION_NONE",
+            "geetest": null,
+        },
         "message": "OK",
         "retcode": 0
     }))
