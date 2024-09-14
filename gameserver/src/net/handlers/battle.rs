@@ -197,7 +197,7 @@ pub async fn on_get_cur_battle_info_cs_req(
             CMD_GET_CUR_BATTLE_INFO_SC_RSP,
             GetCurBattleInfoScRsp {
                 battle_info: Some(SceneBattleInfo::default()),
-                ipnlaoiegjo: Some(Dlibcbeoehg::default()),
+                aether_battle_info: Some(AetherDivideBattleInfo::default()),
                 ..Default::default()
             },
         )
@@ -210,7 +210,7 @@ pub async fn on_pve_battle_result_cs_req(
 ) -> Result<()> {
     session
         .send(
-            CMD_P_V_E_BATTLE_RESULT_SC_RSP,
+            CMD_PVEBATTLE_RESULT_SC_RSP,
             PveBattleResultScRsp {
                 retcode: 0,
                 end_status: body.end_status,
