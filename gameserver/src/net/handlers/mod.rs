@@ -53,7 +53,7 @@ use proto::{
     CmdTelevisionActivityType::*, CmdTextJoinType::*, CmdTrainVisitorType::*,
     CmdTravelBrochureType::*, CmdTreasureDungeonType::*, CmdTutorialType::*, CmdWaypointType::*,
     CmdWolfBroType::*,CmdFightFestType::*,CmdPetType::*, CmdTrackPhotoActivityType::*,
-    CmdSwordTrainingType::*, CmdSummonActivityType::*, CmdRogueArcadeType::*
+    CmdSwordTrainingType::*, CmdSummonActivityType::*, CmdRogueArcadeType::*, CmdRelicRecommendType::*
 };
 
 macro_rules! dummy {
@@ -138,7 +138,7 @@ dummy! {
     GetAllServerPrefsData,
     GetRogueCommonDialogueData,
     GetRogueEndlessActivityData,
-    GetMonsterResearchActivityData,
+    //GetMonsterResearchActivityData,
     GetMainMissionCustomValue,
     GetAssistHistory,
     RogueTournQuery,

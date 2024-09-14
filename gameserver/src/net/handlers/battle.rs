@@ -158,8 +158,8 @@ pub async fn on_start_cocoon_stage_cs_req(
                 .monster_wave_list
                 .iter()
                 .map(|monster_list| SceneMonsterWave {
-                    djicbhlfoga: Some(
-                        Aekldeeeepn {
+                    wave_param: Some(
+                        SceneMonsterWaveParam {
                             level: monster_level, // monster level
                             ..Default::default()
                         }

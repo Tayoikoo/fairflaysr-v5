@@ -123,14 +123,14 @@ impl GameWorld {
                     );
 
                     prop.set_position(
-                        (level_prop.pos_x /* * 1000.0 */) as i32,
-                        (level_prop.pos_y /* * 1000.0 */) as i32,
-                        (level_prop.pos_z /* * 1000.0 */) as i32,
+                        (level_prop.pos_x * 1000.0 ) as i32,
+                        (level_prop.pos_y * 1000.0 ) as i32,
+                        (level_prop.pos_z * 1000.0 ) as i32,
                     );
                     prop.set_rotation(
-                        (level_prop.rot_x /* * 1000.0 */) as i32,
-                        (level_prop.rot_y /* * 1000.0 */) as i32,
-                        (level_prop.rot_z /* * 1000.0 */) as i32,
+                        (level_prop.rot_x * 1000.0 ) as i32,
+                        (level_prop.rot_y * 1000.0 ) as i32,
+                        (level_prop.rot_z * 1000.0 ) as i32,
                     );
                     // Debug prints
                     println!(
